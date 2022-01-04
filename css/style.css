@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+body {
+  background-color: #040411;
+  font-family: 'Source Code Pro', monospace;
+  color: #888;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+header {
+  margin: 0 2em;
+  padding: 3em 0;
+  border-bottom: solid 3px #222255;
+}
+
+header > h1.site-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #414ebe;
+}
+
+header > p.site-summary-text {
+  font-style: italic;
+}
+
+main {
+  margin: 2rem;
+}
+
+ul.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.card-list > li.card-list-item {
+  margin: 1rem 0 1.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #141414;
+}
+
+li.card-list-item > h3.card-title {
+  margin: 0.6rem 0;
+}
+
+li.card-list-item > p.card-description {
+  font-style: italic;
+}
