@@ -4,7 +4,7 @@
 body {
   background-color: #040411;
   font-family: 'Source Code Pro', monospace;
-  color: #888;
+  color: #aaa;
 }
 
 .wrapper {
@@ -15,7 +15,7 @@ body {
 header {
   margin: 0 2em;
   padding: 3em 0;
-  /* border-bottom: solid 3px #222255; */
+  border-bottom: solid 3px #151533;
   opacity: 0;
   animation: 1s fadeIn 0.7s forwards;
 }
@@ -45,55 +45,49 @@ ul.card-list {
 ul.card-list > li.card-list-item {
   margin: 1rem 0 1.2rem;
   padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 90% 1fr;
   border-radius: 1rem;
-  background-color: #0b0b31;
+  background-color: #0f0f0f;
 }
 
-li.card-list-item > .card-header {
+.card-content > .card-header {
   margin-bottom: 0.8rem;
 }
 
-li.card-list-item > .card-header > h3.card-title {
+.card-content > .card-header > h3.card-title {
   margin: 0 0 0.5rem;
 }
 
-li.card-list-item > .card-header > ul.card-links-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-ul.card-links-list > li.card-links-list-item {
-  display: grid;
-  grid-template-columns: 2.2rem 1fr;
-  justify-items: left;
-  align-content: center;
-  align-items: center;
+.card-content > .card-header > h4.card-link-text {
+  margin: 0 0 0.5rem;
   font-weight: 400;
   color: #4c4c5c;
 }
 
-ul.card-links-list > li.card-links-list-item {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: #555577;
-}
-
-li.card-list-item > p.card-description {
+.card-content > p.card-description {
   margin: 0;
+  font-size: 0.95rem;
   font-style: italic;
 }
 
-li.card-list-item > .card-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.card-icon {
+  align-self: center;
+  justify-self: right;
+  opacity: 0.2;
 }
 
-li.card-list-item > .card-footer > .card-footer-icon {
-  color: #888;
+li.card-list-item:hover > .card-icon {
+  opacity: 1;
+  animation: 0.8s fadeInIcon forwards;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInIcon {
+  from { opacity: 0.2; }
   to { opacity: 1; }
 }
